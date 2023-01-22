@@ -1,0 +1,179 @@
+﻿@model Travel_Pakistan_With_Us.Models.TrainBooking
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_TrainInformationLayout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<div class="inner-banner-w3ls py-5" id="home">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold"><span class="text-bl" style="color: darkorange">E</span>dit</h3>
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr style="height:5px;border-width:0;background-color:darkorange">
+                @Html.ValidationSummary(true, "Invaild Credential !!!", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ArivalFrom, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @*@Html.EditorFor(model => model.ArivalFrom, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.ArivalFrom, new List<SelectListItem>
+                                    {new SelectListItem{Text="Lahore",Value="Lahore" },
+                                    new SelectListItem{Text="Karachi",Value="Karachi" } ,
+                                     new SelectListItem { Text = "Islamabad", Value = "Islamabad" } ,
+                                     new SelectListItem { Text = "Kalam", Value = "Kalam" } ,
+                                     new SelectListItem { Text = "Murree", Value = "Murree" } ,
+                                     new SelectListItem { Text = "Gilgit", Value = "Gilgit" } ,
+                                     new SelectListItem { Text = "Kashmir", Value = "Kashmir" } ,
+                                     new SelectListItem { Text = "Faslabad", Value = "Faslabad" } ,
+                                     new SelectListItem { Text = "Rawalpindi", Value = "Rawalpindi" } ,
+                                     new SelectListItem { Text = "Bilochistan", Value = "Bilochistan" } ,
+                                     new SelectListItem { Text = "Kumrat", Value = "Kumrat" } ,
+                                     new SelectListItem { Text = "FairyMeadows", Value = "FairyMeadows" } ,
+                                     new SelectListItem { Text = "Sailkot", Value = "Sailkot" } ,
+                                     new SelectListItem { Text = "Skardu", Value = "Skardu" } ,
+                                     new SelectListItem { Text = "swat", Value = "swat" } },
+                                    "Select ArivalFrom", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ArivalFrom, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ArivalTo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @*@Html.EditorFor(model => model.ArivalTo, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.ArivalTo, new List<SelectListItem>
+                                   {new SelectListItem{Text="Lahore",Value="Lahore" },
+                                   new SelectListItem{Text="Karachi",Value="Karachi" } ,
+                                    new SelectListItem { Text = "Islamabad", Value = "Islamabad" } ,
+                                    new SelectListItem { Text = "Kalam", Value = "Kalam" } ,
+                                    new SelectListItem { Text = "Murree", Value = "Murree" } ,
+                                    new SelectListItem { Text = "Gilgit", Value = "Gilgit" } ,
+                                    new SelectListItem { Text = "Kashmir", Value = "Kashmir" } ,
+                                    new SelectListItem { Text = "Faslabad", Value = "Faslabad" } ,
+                                    new SelectListItem { Text = "Rawalpindi", Value = "Rawalpindi" } ,
+                                    new SelectListItem { Text = "Bilochistan", Value = "Bilochistan" } ,
+                                    new SelectListItem { Text = "Kumrat", Value = "Kumrat" } ,
+                                    new SelectListItem { Text = "FairyMeadows", Value = "FairyMeadows" } ,
+                                    new SelectListItem { Text = "Sailkot", Value = "Sailkot" } ,
+                                    new SelectListItem { Text = "Skardu", Value = "Skardu" } ,
+                                    new SelectListItem { Text = "swat", Value = "swat" } },
+                                   "Select ArivalTo", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ArivalTo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.CNIC, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.CNIC, new { htmlAttributes = new { @class = "form-control", placeholder = "XXXXX-XXXXXXX-X" } })
+                        @Html.ValidationMessageFor(model => model.CNIC, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "03XX-XXXXXXX" } })
+                        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TimeSlot, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @*@Html.EditorFor(model => model.TimeSlot, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.TimeSlot, new List<SelectListItem>
+                                  {new SelectListItem{Text="Morning",Value="Morning" },
+                                   new SelectListItem { Text = "Evening", Value = "Evening"}},
+                                  "Select Time Slot", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TimeSlot, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Departing, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.Departing, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Departing, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Returing, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.Returing, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Returing, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SelectTrain, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @*@Html.EditorFor(model => model.SelectTrain, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.SelectTrain, new List<SelectListItem>
+                                  {new SelectListItem{Text="Awam Express",Value="Awam Express" },
+                                  new SelectListItem{Text="Pakistan Express",Value="Pakistan Express" } ,
+                                   new SelectListItem { Text = "Hazara Express", Value = "Hazara Express" } ,
+                                   new SelectListItem { Text = "Allama Iqbal Express", Value = "Allama Iqbal Express" } ,
+                                   new SelectListItem { Text = "Shah Hussain Express", Value = "Shah Hussain Express" } ,
+                                   new SelectListItem { Text = "Shalimar Express", Value = "Shalimar Express" } ,
+                                   new SelectListItem { Text = "Karakoram Express", Value = "Karakoram Express" } },
+                                  "Select Train", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.SelectTrain, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.SelectTicket, "Select Ticket", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @* @Html.EditorFor(model => model.SelectTicket, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.SelectTicket, new List<SelectListItem>
+                                    {new SelectListItem{Text="1",Value="1" },
+                                    new SelectListItem{Text="2",Value="2" } ,
+                                     new SelectListItem { Text = "3", Value = "3" } ,
+                                     new SelectListItem { Text = "4", Value = "4" } ,
+                                     new SelectListItem { Text = "5", Value = "5" } ,
+                                     new SelectListItem { Text = "6", Value = "6" } ,
+                                     new SelectListItem { Text = "7", Value = "7" } ,
+                                     new SelectListItem { Text = "8", Value = "8" } ,
+                                     new SelectListItem { Text = "9", Value = "9" } ,
+                                     new SelectListItem { Text = "10", Value = "10" } ,
+                                     new SelectListItem { Text = "11", Value = "11" } ,
+                                     new SelectListItem { Text = "12", Value = "12" } ,
+                                     new SelectListItem { Text = "All", Value = "All" } },
+                                    "Select Ticket", new { @class = "form-control" })
+
+                        @Html.ValidationMessageFor(model => model.SelectTicket, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.User_id, "User Name", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.DropDownList("User_id", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.User_id, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="submit" class="button-btn btn-success" style="border-radius: 20px;" />
+                    </div>
+                </div>
+            </div>
+        }
+        <div>
+            <big><bold> @Html.ActionLink("Back To List", "Index", new { area = "" }, new { style = "color:orange;font-weight:80;;" })</big>
+        </div>
+        @*<div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>*@
+    </div>
+</div>

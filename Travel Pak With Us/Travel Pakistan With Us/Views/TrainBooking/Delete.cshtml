@@ -1,0 +1,105 @@
+﻿@model Travel_Pakistan_With_Us.Models.TrainBooking
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_TrainInformationLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div class="form-group">
+    <h4>TrainBooking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArivalFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArivalFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArivalTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArivalTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeSlot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeSlot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Returing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Returing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SelectTrain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SelectTrain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SelectTicket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SelectTicket)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AspNetUsers.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AspNetUsers.UserName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

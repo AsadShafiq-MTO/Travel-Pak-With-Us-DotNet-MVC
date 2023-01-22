@@ -1,0 +1,247 @@
+﻿@model Travel_Pakistan_With_Us.Models.AirLineInformation
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AirlineInformationLayout.cshtml";
+    }
+
+
+<div class="inner-banner-w3ls py-5" id="home">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title-w3 mb-5 text-center text-wh font-weight-bold"><span class="text-bl">A</span>irline <span class="text-bl">I</span>nformation</h3>
+        @using (Html.BeginForm())
+
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <hr style="height:5px;border-width:0;color:gray;background-color:gold">
+
+                @Html.ValidationSummary(true, "Invaild Credential !!!", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, "Select Airline", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @*@Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.Name, new List<SelectListItem>
+                                  {new SelectListItem{Text="PIA",Value="PIA" },
+                                  new SelectListItem{Text="Airblue",Value="Airblue" } ,
+                                   new SelectListItem { Text = "Quater Airline", Value = "Quater Airline" } ,
+                                   new SelectListItem { Text = "SereneAir", Value = "SereneAir" } ,
+                                   new SelectListItem { Text = "Shaheen Airline", Value = "Shaheen Airline" } ,
+                                   new SelectListItem { Text = "Askari Aviation", Value = "Askari Aviation" } ,
+                                   new SelectListItem { Text = "Vision Airline", Value = "Vision Airline" } ,
+                                   new SelectListItem { Text = "AirSial", Value = "AirSial" } ,
+                                   new SelectListItem { Text = "Fly Jinnah", Value = "Fly Jinnah" } },
+                                  "Select Airline", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Route, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @* @Html.EditorFor(model => model.Route, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.Route, new List<SelectListItem>
+                           {new SelectListItem{Text="Lahore-Islamabad",Value="Lahore-Islamabad" },
+                           new SelectListItem{Text="Islamabad-Lahore",Value="Islamabad-Lahore" } ,
+                            new SelectListItem { Text = "Lahore-Swat", Value = "Lahore-Swat" } ,
+                            new SelectListItem { Text = "Swat-Lahore", Value = "Swat-Lahore" } ,
+                            new SelectListItem { Text = "Lahore-Peshawar", Value = "Lahore-Peshawar" } ,
+                            new SelectListItem { Text = "Peshawar-Lahore", Value = "Peshawar-Lahore" } ,
+                            new SelectListItem { Text = "Lahore-Kashmir", Value = "Lahore-Kashmir" } ,
+                            new SelectListItem { Text = "Kashmir-Lahore", Value = "Kashmir-Lahore" },
+
+                            new SelectListItem{Text="Swat-Gilgit",Value="Swat-Gilgit" },
+                           new SelectListItem{Text="Gilgit-Swat",Value="Gilgit-Swat" } ,
+                            new SelectListItem { Text = "Swat-Hazara", Value = "Swat-Hazara" } ,
+                            new SelectListItem { Text = "Hazara-Swat", Value = "Hazara-Swat" } ,
+                            new SelectListItem { Text = "Swat-Mansara", Value = "Swat-Mansara" } ,
+                            new SelectListItem { Text = "Mansara-Swat", Value = "Mansara-Swat" } ,
+                            new SelectListItem { Text = "Swat-Murree", Value = "Swat-Murree" } ,
+                            new SelectListItem { Text = "Murree-Swat", Value = "Murree-Swat" },
+
+                            new SelectListItem{Text="Karachi-Kalam",Value="Karachi-Kalam" },
+                           new SelectListItem{Text="Kalam-Karachi",Value="Kalam-Karachi" } ,
+                            new SelectListItem { Text = "Karachi-Murree", Value = "Karachi-Murree" } ,
+                            new SelectListItem { Text = "Murree-Karachi", Value = "Murree-Karachi" } ,
+                            new SelectListItem { Text = "Karachi-Gilgit", Value = "Karachi-Gilgit" } ,
+                            new SelectListItem { Text = "Gilgit-Karachi", Value = "Gilgit-Karachi" } ,
+                            new SelectListItem { Text = "Karachi-Skardu", Value = "Karachi-Skardu" } ,
+                            new SelectListItem { Text = "Skardu-Karachi", Value = "Skardu-Karachi" },
+
+                             new SelectListItem{Text="Murree-Swat",Value="Murree-Swat" },
+                           new SelectListItem{Text="Swat-Murree",Value="Swat-Murree" } ,
+                            new SelectListItem { Text = "Murree-Gilgit", Value = "Murree-Gilgit" } ,
+                            new SelectListItem { Text = "Gilgit-Murree", Value = "Gilgit-Murree" } ,
+                            new SelectListItem { Text = "Murree-Kalam", Value = "Murree-Kalam" } ,
+                            new SelectListItem { Text = "Kalam-Murree", Value = "Kalam-Murree" } ,
+                            new SelectListItem { Text = "Murree-Hazara", Value = "Murree-Hazara" } ,
+                            new SelectListItem { Text = "Hazara-Murree", Value = "Hazara-Murree" },
+
+                             new SelectListItem{Text="Sialkot-Lahore",Value="Sialkot-Lahore" },
+                           new SelectListItem{Text="Lahore-Sialkot",Value="Lahore-Sialkot" } ,
+                            new SelectListItem { Text = "Sialkot-Gilgit", Value = "Sialkot-Gilgit" } ,
+                            new SelectListItem { Text = "Gilgit-Sialkot", Value = "Gilgit-Sialkot" } ,
+                            new SelectListItem { Text = "Sialkot-Murree", Value = "Sialkot-Murree" } ,
+                            new SelectListItem { Text = "Murree-Sialkot", Value = "Murree-Sialkot" } ,
+                            new SelectListItem { Text = "Sialkot-Swat", Value = "Sialkot-Swat" } ,
+                            new SelectListItem { Text = "Swat-Sialkot", Value = "Swat-Sialkot" },
+                            new SelectListItem { Text = "Kurakram-Mansara", Value = "Kurakram-Mansara" } },
+                           "Select Route", new { @class = "form-control" })
+
+                        @Html.ValidationMessageFor(model => model.Route, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TimeDuration, "Time Duration", htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.TimeDuration, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TimeDuration, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DepartingTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @*@Html.EditorFor(model => model.DepartingTime, new { htmlAttributes = new { @class = "form-control" } })*@
+                        @Html.DropDownListFor(m => m.DepartingTime, new List<SelectListItem>
+               { new SelectListItem { Text = "12am", Value = "12am" },
+                new SelectListItem{Text="01am",Value="01am" },
+              new SelectListItem{Text="02am",Value="02am" } ,
+               new SelectListItem { Text = "03am", Value = "03am" } ,
+               new SelectListItem { Text = "04am", Value = "04am" } ,
+               new SelectListItem { Text = "05am", Value = "05am" } ,
+               new SelectListItem { Text = "06am", Value = "06am" } ,
+               new SelectListItem { Text = "07am", Value = "07am" } ,
+               new SelectListItem { Text = "08am", Value = "08am" },
+               new SelectListItem{Text="09am",Value="09am" },
+               new SelectListItem{Text="10am",Value="10am" } ,
+               new SelectListItem { Text = "11am", Value = "11am" } ,
+
+                new SelectListItem { Text = "12pm", Value = "12pm" },
+                new SelectListItem{Text="01pm",Value="01pm" },
+              new SelectListItem{Text="02pm",Value="02pm" } ,
+               new SelectListItem { Text = "03pm", Value = "03pm" } ,
+               new SelectListItem { Text = "04pm", Value = "04pm" } ,
+               new SelectListItem { Text = "05pm", Value = "05pm" } ,
+               new SelectListItem { Text = "06pm", Value = "6pm" } ,
+               new SelectListItem { Text = "07pm", Value = "07pm" } ,
+               new SelectListItem { Text = "08pm", Value = "08pm" },
+               new SelectListItem{Text="09pm",Value="09pm" },
+               new SelectListItem{Text="10pm",Value="10pm" } ,
+               new SelectListItem { Text = "11pm", Value = "11pm" } },
+              "Departing Time", new { @class = "form-control" })
+
+
+                        @Html.ValidationMessageFor(model => model.DepartingTime, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TicketPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.TicketPrice, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TicketPrice, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="submit" class="button-btn btn-success" style="border-radius: 20px;" />
+                    </div>
+                </div>
+            </div>
+        }
+
+
+        <div>
+            <big>@Html.ActionLink("Back To List", "Index", new { area = "" }, new { style = "color:aqua;font-weight:80;" })</big>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<h2>Create</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>AirLineInformation</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Route, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Route, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Route, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TimeDuration, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TimeDuration, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TimeDuration, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DepartingTime, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DepartingTime, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DepartingTime, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.TicketPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.TicketPrice, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TicketPrice, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>*@

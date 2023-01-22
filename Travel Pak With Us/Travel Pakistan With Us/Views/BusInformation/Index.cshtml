@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Travel_Pakistan_With_Us.Models.BusInformation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BusInformationLayout.cshtml";
+}
+
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr  class="form-group">
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Route)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartingTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TicketPrice)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr  class="form-group">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Route)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeDuration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartingTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TicketPrice)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+

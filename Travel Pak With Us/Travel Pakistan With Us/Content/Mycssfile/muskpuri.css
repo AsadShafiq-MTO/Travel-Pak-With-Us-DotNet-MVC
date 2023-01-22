@@ -1,0 +1,202 @@
+*
+{ 
+    margin:0;
+    padding: 0;
+}
+.head
+{
+    color:white;
+    text-align: left;
+    font-family: serif;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+}
+.head11
+{
+    color:white;
+    font-family: serif;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+    text-align: center;
+}
+.head12
+{
+    color:green;
+    font-family: serif;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+    text-align: center;
+    font-size:50px;
+}
+#service h1
+  {
+    letter-spacing: .40rem;
+  }
+
+.header
+{
+    height:80%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url("./muskpuri/muskpuri.jpg");
+    background-size:cover;
+    
+    background-position: center;
+    background-attachment: fixed;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+    text-align: center;
+    color:white;
+}
+.header img
+{
+
+    width:60px;
+    float:left;
+    display: flex;
+}
+.center-header .icon1
+{
+     float:center;
+     margin-top:110px;
+    margin-left: 550px;
+    margin-bottom: 0px;
+    width:80px;
+    height: 80px;
+
+}
+.head
+{
+    color:white;
+    text-align: left;
+    font-family: serif;
+
+}
+.head span
+{
+    color: crimson;
+}
+.center-header h1
+{
+    padding-top: 200px;
+    font-family: serif;
+    padding-bottom: 0;
+    letter-spacing: .5rem;
+    margin-bottom: 0;
+    font-size: 55px;
+}
+.center-header span
+{
+    color:white;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+
+}
+.center-header p
+{
+    margin: 18px 0;
+}
+/*end of header*/
+/*start of feature section*/
+.features
+{
+    padding: 100px 0;
+}
+h1
+{
+ text-align: center;
+ padding-bottom: 30px;
+}
+.feature-img img
+{
+width: 100%;
+
+}
+.price
+{
+    width:50px;
+    height: 50px;
+    background: #ff5722;
+    color: white;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
+    position: absolute;
+    left:20px;
+    bottom: -25px;
+}
+.feature-img
+{
+    position: relative;
+}
+.rating
+{
+    padding: 3px;
+    float: right;
+    background: #fff;
+    bottom:-1px;
+    right:0;
+    position:absolute;
+
+}
+.features .fa
+{
+    font-size: 15px;
+    color: #ff5722;
+}
+.feature-details
+{
+    padding: 20px;
+    text-align: justify;
+}
+.feature-details h4
+{
+    font-weight: 600;
+    margin-top: 20px;
+}
+.feature-details .fa
+{
+    margin-right: 5px;
+}
+.feature-box
+{
+    box-shadow: 0 0 10px 1px rgba(37, 37, 214, 0.18);
+    margin-bottom: 30px;
+}
+/*End of feature sectio*/
+/*start of center section*/
+#service .service{
+    flex-direction:column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+  #service .service-title
+  {
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: serif;
+    color:black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+  }
+  #service .service-title span
+  {
+   color:crimson; 
+  }
+  #service .service-top p
+  {
+    text-align: center;
+    margin-left: 300px;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    width:400px;
+    float:center;
+    width:800px;
+     padding: 5px 20px;    /*teacher userd here width:400px; margin:0 auto;*/
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+  }
+/*End of center section*/

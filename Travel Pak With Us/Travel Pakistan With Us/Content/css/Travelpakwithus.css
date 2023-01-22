@@ -1,0 +1,528 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 700px;
+    background-image: /*linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),*/ url('../../images/imges/water\ large.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+    .header img {
+        width: 60px;
+        float: left;
+        display: flex;
+    }
+
+.login-btn {
+    width: 100px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 5px solid #fff;
+    border-radius: 50px;
+    padding: 8px 25px;
+    background: transparent;
+    color: white;
+    float: right;
+}
+
+    .login-btn:hover {
+        color: green;
+        outline: none !important;
+        border: 5px solid green;
+        border-radius: 50px;
+        padding: 8px 25px;
+        background: transparent;
+    }
+
+
+/*header section start*/
+.head {
+    color: aqua;
+    text-align: left;
+    font-family: Arial;
+    text-shadow: 1px 1px 19px yellow,1px 1px 5px blue,1px 1px 19px blue;
+}
+
+    .head h1 {
+        font-size: 90px;
+    }
+
+.center-header h1 {
+    padding-top: 260px;
+    font-family: serif;
+    padding-bottom: 0;
+    letter-spacing: .5rem;
+    margin-bottom: 0;
+    font-size: 55px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+}
+
+.center-header p {
+    margin: 18px 0;
+}
+
+    .center-header p span {
+        text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+    }
+
+.input-group {
+    width: 90% !important;
+    max-width: 500px;
+    border-radius: 30px;
+    background: #fff;
+    margin: auto;
+    padding: 2px
+}
+
+.form-control {
+    border: 0 !important;
+    border-radius: 30px !important;
+    margin: 2px;
+    box-shadow: none !important;
+}
+
+.input-group-text {
+    width: 100px;
+    /*background-image:linear-gradient(#00ff7e,#1f3d90); */
+    background-image: linear-gradient(lime,darkgreen);
+    border: 0 !important;
+    color: #fff !important;
+    padding: 0 25px !important;
+    border-radius: 30px !important;
+    box-shadow: none !important;
+}
+/*header section is complete*/
+/*feature*/
+.features {
+    padding: 100px 0;
+}
+
+.head1 {
+    font-size: 50px;
+    font-family: serif;
+    text-align: center;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    color: green;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+}
+
+.feature-img img {
+    width: 100%;
+}
+
+.price {
+    width: 50px;
+    height: 50px;
+    background: #008000;
+    color: white;
+    font-weight: 600;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
+    position: absolute;
+    left: 20px;
+    bottom: -25px;
+}
+
+.feature-img {
+    position: relative;
+}
+
+.rating {
+    padding: 3px;
+    float: right;
+    background: #fff;
+    bottom: -1px;
+    right: 0;
+    position: absolute;
+}
+
+.features .fa {
+    font-size: 15px;
+    color: green;
+}
+
+.feature-details {
+    padding: 20px;
+    text-align: justify;
+}
+
+    .feature-details h4 {
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .feature-details .fa {
+        margin-right: 5px;
+    }
+
+.feature-box {
+    box-shadow: 0 0 10px 1px rgba(37, 37, 214, 0.18);
+    margin-bottom: 30px;
+}
+/* End feature Destination section */
+/*start of glarry section*/
+.gallery {
+    padding: 10px 0;
+    background: #efefef;
+}
+
+.galleryh1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: serif;
+    padding-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: green;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+}
+
+.gallery-box img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+    .gallery-box img:hover {
+        transform: scale(1.1);
+    }
+
+.gallery-box h4 {
+    /**/ display: block;
+    color: #ffff;
+    text-shadow: -2px 2px 2px #000;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /**/ transform: translate(-50%,-50);
+}
+
+.gallery-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+/*End of gallery section*/
+.banner {
+    height: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('../../images/imges/background\ images.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 10%;
+}
+
+.banner-highlights {
+    padding: 50px 0;
+    background: rgba(0, 255, 0,0.6);
+    text-align: center;
+    color: white;
+}
+
+#banner .col-md-8 {
+    text-align: center;
+}
+
+.booking-btn {
+    width: 120px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 5px solid #fff;
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    margin-top: 25px;
+}
+
+.users-feedback {
+    padding: 100px 0;
+}
+
+.Reviewh1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: serif;
+    padding-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: red;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+}
+
+.user-review {
+    text-align: center;
+    box-shadow: 0 0 10px 0 red;
+    padding-bottom: 50px;
+}
+
+    .user-review p {
+        padding: 50px 10px 10px 10px;
+    }
+
+.users-feedback img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    margin: -30px 0 20px 40%;
+}
+
+.user-review p::before {
+    content: '\201d';
+    display: block;
+    position: absolute;
+    font-size: 100px;
+    color: blue;
+    font-family: sans-serif;
+    left: 44%;
+    top: -20px;
+}
+/*End of revier seciton*/
+
+/* footer */
+.footer {
+    padding: 50px 60px 15px;
+    background-image: linear-gradient(black,green);
+    color: #fff;
+}
+
+.head11 {
+    font-size: 40px;
+    font-family: serif;
+    text-align: center;
+    padding-bottom: 40px;
+    color: green;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px white,1px 1px 19px white;
+}
+
+.footer-logo {
+    width: 60px;
+    float: left;
+    display: flex;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.footer h4 {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.footer p {
+    font-size: 12px;
+    text-align: justify;
+    padding-right: 35px;
+}
+
+.col-md-3 a {
+    text-decoration: none;
+    color: red;
+}
+
+    .col-md-3 a:hover {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+    }
+
+.footer .row .fa {
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+.footer hr {
+    margin-top: 10px;
+    background: #efefef;
+}
+
+.fa-heart {
+    margin: 0 5px;
+    color: blue;
+}
+
+.footer .copy-right {
+    text-align: center;
+}
+/* //footer */
+
+
+
+/*button codidng*/
+.login-page {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.container button {
+    font-size: 20px;
+    color: red;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+
+#login-form {
+    display: none;
+    z-index: 1;
+}
+
+.form-box {
+    width: 400px;
+    height: 505px;
+    position: relative;
+    margin: 1.5% auto;
+    /*background: rgba(0,0,0,0.3);*/
+    background-image: linear-gradient(white,blue);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    background: red;
+    box-shadow: 0 0 20px 9px #ff51241f;
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 25px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+.form-box {
+    border: 0;
+    outline: none;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: darkgreen; /*(#F3C693;*/
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group-login {
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-group-register {
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: darkgreen; /*#F3C693;*/
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 20px 10px 34px 0;
+}
+
+.login-page span {
+    color: white;
+    font-size: 12px;
+    bottom: 75px;
+    position: absolute;
+}
+
+
+
+a.move-top {
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    z-index: 0;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+    a.move-top span {
+        color: #000;
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+
+
+#login {
+    left: 50px;
+}
+
+    #login input {
+        color: white;
+        font-size: 15;
+    }
+
+#register {
+    left: 450px;
+}
+
+    #register input {
+        color: white;
+        font-size: 15;
+    }
+
+
+
+/*End of button coding*/
+

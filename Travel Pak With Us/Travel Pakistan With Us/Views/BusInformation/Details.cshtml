@@ -1,0 +1,60 @@
+﻿@model Travel_Pakistan_With_Us.Models.BusInformation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_BusInformationLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="form-group">
+    <h4>BusInformation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Route)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Route)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartingTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartingTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TicketPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TicketPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<br /><br />

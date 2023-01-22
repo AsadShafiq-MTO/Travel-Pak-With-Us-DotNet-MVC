@@ -1,0 +1,108 @@
+﻿@model Travel_Pakistan_With_Us.Models.AirlineBooking
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AirlineBookingLayout.cshtml";
+}
+
+<div class="inner-banner-w3ls py-5" id="home">
+    <div class="container py-xl-5 py-lg-3">
+
+        <h3 style="color:red">Are you sure you want to delete Information</h3>
+        <div class="form-group">
+            <hr style="height:5px;border-width:0;background-color:crimson">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.FlyingFrom)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FlyingFrom)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FlyingTo)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FlyingTo)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CNIC)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CNIC)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PhoneNumber)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PhoneNumber)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TimeSlot)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TimeSlot)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Departing)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Departing)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Returing)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Returing)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SelectAirline)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SelectAirline)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SelectTicket)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SelectTicket)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.AspNetUsers.UserName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AspNetUsers.UserName)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </div>
+    </div>
+</div>

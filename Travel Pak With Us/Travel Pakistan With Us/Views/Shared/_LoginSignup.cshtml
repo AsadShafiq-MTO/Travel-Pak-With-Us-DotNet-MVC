@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "_LoginSignup";
+   
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Pakistan with us</title>
+    <link href="~/Content/Mycssfile/LoginPage.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="~/images/icon/icons8-airplane-64 (2).png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+<body>
+
+        <div>
+            @RenderBody()
+        </div>
+
+
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="~/images/icon/icons8-airplane-48.png" class="footer-logo">
+                        <h1 class="head11"><b>Travel Pak With Us</b></h1>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Featured</h4>
+                        <p><a href="#banner">Deals&offers</a></p>
+                        <p><a href="#Review">Customer Reviews</a></p>
+                        <p><a href="#Feature">Future Destination</a></p>
+                        <p><a href="booking.html">Cancallation policy</a></p>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Quick content</h4>
+                        <p><i class="fa fa-phone-square"></i> +923014025352</p>
+                        <p><i class="fa fa-envelope"></i> Skypakblue786@gmail.com</p>
+                        <p><i class="fa fa-home"></i> xyz Road, AB:City</p>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4>Follow us on</h4>
+                        <p><i class="fa fa-Facebook-official"></i> Facebook</p>
+                        <p><i class="fa fa-youtube-play"></i> youtube</p>
+                        <p><i class="fa fa-twitter"></i>Twitter</p>
+                    </div>
+                </div><hr>
+            </div>
+
+        </section>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
+

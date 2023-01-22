@@ -1,0 +1,193 @@
+﻿@using Travel_Pakistan_With_Us.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LoginSignup.cshtml";
+}
+<ul class="nav navbar-nav navbar-right">
+    <div class="container">
+
+        @*<button class="login-btn" style="width:auto;">
+            @Html.ActionLink("Contact", "Contact", "Home", htmlAttributes: new { style = "text-decoration:none" })
+        </button>
+        <button class="login-btn" style="width:auto;">
+            @Html.ActionLink("About", "About", "Home", htmlAttributes: new { style = "text-decoration:none" })
+        </button>
+        <button class="login-btn" style="width:auto;">
+            @Html.ActionLink("Home", "Index", "Home", htmlAttributes: new { style = "text-decoration:none" })
+        </button>*@
+        <button class="button-btn btn-info" style="width:auto;">
+            @Html.Partial("_LoginPartial")
+        </button>
+
+
+
+    </div>
+</ul>
+    <section class="header">
+        <div>
+            <div class="submit-btn btn-info">
+                <h2>@ViewBag.Title.</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <section id="loginForm">
+                            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                            {
+                                @Html.AntiForgeryToken()
+                                @*<h4>Use a local account to log in.</h4>*@
+                                <hr />
+                                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                                @*<div class="form-group">
+                                        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>*@
+
+                                @*<div class="form-group">
+                                    @Html.LabelFor(m => m.UserType, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    <div class="col-md-10">
+                                        @Html.DropDownListFor(m => m.UserType, new List<SelectListItem>
+                                         {new SelectListItem{Text="Admin",Value="Admin" },
+                                         new SelectListItem{Text="User",Value="user" } }, "Please Select", new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.UserType, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>*@
+
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-10">
+                                        <div class="checkbox">
+                                            @Html.CheckBoxFor(m => m.RememberMe)
+                                            @Html.LabelFor(m => m.RememberMe)
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="submit-btn btn-primary" style="text-align:left">
+
+                                        <input type="submit" value="Log in" class="submit-btn" style="width:auto;" />
+                                    </div>
+                                </div>
+                                <p>
+                                    @Html.ActionLink("Register as a new user", "Register")
+                                </p>
+                                @* Enable this once you have account confirmation enabled for password reset functionality
+                                    <p>
+                                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                                    </p>*@
+                            }
+                        </section>
+                    </div>
+                    <div class="col-md-4">
+                        <section id="socialLoginForm">
+
+                            <style>
+                                * {
+                                    box-sizing: border-box;
+                                }
+
+                                .column {
+                                    float: left;
+                                    width: 33.33%;
+                                    padding: 5px;
+                                }
+
+                                /* Clearfix (clear floats) */
+                                .row::after {
+                                    content: "";
+                                    clear: both;
+                                    display: table;
+                                }
+                            </style>
+                            </head>
+                            <body>
+
+                                @*<h2>Images Side by Side</h2>
+                                    <p>How to create side-by-side images with the CSS float property:</p>*@
+
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="~/images/allcity/murree/Nathiagali.jpg" alt="Snow" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/destination/badshi masjid.jpeg" alt="Forest" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/water large.jpg" alt="Mountains" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="~/images/imges/iceland-3777644.jpg" alt="Snow" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/bora-bora-large.jpg" alt="Forest" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/water large.jpg" alt="Mountains" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="~/images/imges/iceland-3777644.jpg" alt="Snow" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/bora-bora-large.jpg" alt="Forest" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/water large.jpg" alt="Mountains" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="~/images/imges/iceland-3777644.jpg" alt="Snow" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/bora-bora-large.jpg" alt="Forest" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/water large.jpg" alt="Mountains" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <img src="~/images/imges/iceland-3777644.jpg" alt="Snow" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/bora-bora-large.jpg" alt="Forest" style="width:100%">
+                                    </div>
+                                    <div class="column">
+                                        <img src="~/images/water large.jpg" alt="Mountains" style="width:100%">
+                                    </div>
+                                </div>
+
+
+                                @*@Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })*@
+                        </section>
+                    </div>
+                </div>
+
+                @section Scripts {
+                    @Scripts.Render("~/bundles/jqueryval")
+                }
+                <div>
+                </div>
+    </section>

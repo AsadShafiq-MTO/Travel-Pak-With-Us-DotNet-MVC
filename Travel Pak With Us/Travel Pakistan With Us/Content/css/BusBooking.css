@@ -1,0 +1,1112 @@
+﻿body {
+    padding: 0;
+    margin: 0;
+    /*background: red;*/
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../../images/imgeofbooking/imgBus.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+}
+
+.form-group {
+    color: white;
+}
+
+.form-control {
+    border-radius: 20px;
+}
+
+.imge {
+    height: 70px;
+    width: 70px;
+    float: left;
+    border-radius: 25px;
+}
+
+.font {
+    font-size: 50px;
+    display: inline;
+}
+
+    .font h1 {
+        font-size: 30px;
+        color: white;
+    }
+
+
+body button,
+.btn,
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+    .btn:hover,
+    body button:hover {
+        opacity: .8;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
+    body a:hover {
+        opacity: .8;
+        text-decoration: none;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* //Reset Code */
+
+/* colors code */
+.text-bl {
+    color: #343a40;
+}
+
+.text-wh {
+    color: #fff;
+}
+
+.text-li {
+    color: #f8f9fa;
+}
+
+.bg-li {
+    background: #f8f9fa;
+}
+
+.bg-wh {
+    background: #fff;
+}
+
+.let {
+    letter-spacing: 1px;
+}
+
+/* //colors code */
+
+/* bottom-to-top */
+a.move-top {
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    z-index: 0;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+    a.move-top span {
+        color: #000;
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+/* //bottom-to-top */
+
+/* header */
+header {
+    background: olive;
+    border-bottom: 1px solid #e4e4e4;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+/* navigation */
+/* CSS Document */
+.toggle-2,
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+#logo a {
+    float: left;
+    display: initial;
+    font-weight: 600;
+    font-size: 46px;
+    text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+    color: #ff6b6b;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    /* float: right; */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+    /* Positioning the navigation items inline */
+    nav ul li {
+        margin: 0px;
+        display: inline-block;
+        float: left;
+    }
+
+/* Styling the links */
+nav a {
+    color: white;
+    /* text-transform: capitalize; */
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+    /* Background color change on Hover */
+    nav a:hover {
+        color: aqua;
+        opacity: .8;
+    }
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 26px;
+    background: #000;
+    padding: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    z-index: 9;
+    /* has to be the same number as the "line-height" of "nav a" */
+}
+
+    nav ul ul li a:hover {
+        color: #fff;
+    }
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+    nav ul ul li a {
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        margin: 10px 0;
+        letter-spacing: 1px;
+    }
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:only-child:after {
+    content: '';
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media(max-width: 1280px) {
+    nav a {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width : 991px) {
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle + a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        padding: 7px 12px;
+        font-size: 15px;
+        text-decoration: none;
+        border: none;
+        float: right;
+        background-color: #eee;
+        color: #000;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -o-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -moz-border-radius: 4px;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
+    .menu .toggle {
+        float: none;
+        text-align: center;
+        margin: auto;
+        max-width: 115px;
+        padding: 5px;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 2px;
+        background: transparent;
+        color: #000;
+    }
+
+    .toggle:hover {
+        opacity: .8;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked + ul {
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul {
+        float: right;
+    }
+
+        /* Change menu item's width to 100% */
+        nav ul li {
+            display: block;
+            width: 100%;
+        }
+
+        nav a:hover,
+        nav ul ul ul a {
+            background-color: transparent;
+        }
+
+        /* Hide Dropdowns by Default */
+        nav ul ul {
+            float: none;
+            position: static;
+            color: #ffffff;
+            /* has to be the same number as the "line-height" of "nav a" */
+        }
+
+            /* Hide menus on hover */
+            nav ul ul li:hover > ul,
+            nav ul li:hover > ul {
+                display: none;
+            }
+
+            /* Fisrt Tier Dropdown */
+            nav ul ul li {
+                display: block;
+                width: 100%;
+                padding: 0;
+            }
+
+                nav ul ul li a {
+                    letter-spacing: 2px;
+                }
+
+            nav ul ul ul li {
+                position: static;
+                /* has to be the same number as the "width" of "nav ul ul li" */
+            }
+
+    .menu li.active a,
+    .nav ul ul li a:hover {
+        color: #fff;
+        opacity: .8;
+    }
+
+    nav a {
+        font-size: 14px;
+        display: block;
+        margin: 8px 0;
+    }
+
+    a.reqe-button {
+        padding: 12px 20px;
+        font-size: 13px;
+        margin: 0 8px;
+    }
+}
+
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+}
+
+
+
+
+
+/* footer */
+.footer {
+    padding: 50px 60px 15px;
+    background-image: linear-gradient(black,olive);
+    color: #fff;
+}
+
+.head11 {
+    font-size: 40px;
+    font-family: serif;
+    text-align: center;
+    padding-bottom: 40px;
+    color: green;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px white,1px 1px 19px white;
+}
+
+.footer-logo {
+    width: 60px;
+    float: left;
+    display: flex;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.footer h4 {
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.footer p {
+    font-size: 12px;
+    text-align: justify;
+    padding-right: 35px;
+}
+
+.col-md-3 a {
+    text-decoration: none;
+    color: red;
+}
+
+    .col-md-3 a:hover {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+    }
+
+.footer .row .fa {
+    padding-right: 20px;
+    font-size: 15px;
+}
+
+.footer hr {
+    margin-top: 10px;
+    background: #efefef;
+}
+
+.fa-heart {
+    margin: 0 5px;
+    color: blue;
+}
+
+.footer .copy-right {
+    text-align: center;
+}
+/* //footer */
+
+
+
+
+
+/* login */
+.modal-body {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label.col-form-label {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.modal-body .form-control {
+    background: #fff;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border: none;
+    padding: 12px 14px;
+    font-size: 15px;
+}
+
+button.button-style-w3 {
+    outline: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #fff;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.text-style-w3ls {
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+    p.dont-do a:hover,
+    .text-style-w3ls:hover {
+        color: #fff;
+    }
+
+/* //login */
+
+/* responsive */
+@media(max-width: 1680px) {
+    .style-banner {
+        padding-top: 16em;
+    }
+}
+
+@media(max-width: 1600px) {
+    .style-banner {
+        padding-top: 14em;
+    }
+}
+
+@media(max-width: 1440px) {
+    .img-posi-w3pvt {
+        width: 10%;
+    }
+
+    .style-banner {
+        padding-top: 12em;
+    }
+
+    .mian-content-wthree {
+        min-height: 52vw;
+    }
+}
+
+@media(max-width: 1366px) {
+    h3.title-w3 {
+        font-size: 40px;
+    }
+
+    .img-posi-w3pvt {
+        width: 8%;
+    }
+
+    .style-banner h3 {
+        font-size: 52px;
+    }
+
+    .style-banner p {
+        font-size: 16px;
+    }
+
+    .mian-content-wthree {
+        min-height: 54vw;
+    }
+}
+
+
+
+@media(max-width: 1080px) {
+
+    .footer-grid ul li a,
+    .footer-grid ul li {
+        font-size: 13px;
+    }
+
+    a.logo {
+        font-size: 54px;
+    }
+
+    p.copy-right-grids {
+        font-size: 13px;
+    }
+
+    .demo > li {
+        max-width: 295px;
+    }
+
+    h3.title-w3 {
+        font-size: 38px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    ul.apps-lists li a {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+
+        ul.apps-lists li a span {
+            font-size: 22px;
+        }
+
+    .img-podi-w3ls {
+        width: 18%;
+    }
+
+    .serv-w3mk {
+        padding: 0;
+    }
+
+    .team-img {
+        min-height: 280px;
+    }
+
+    .card-body p {
+        color: #eee;
+        font-size: 13px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    nav.navbar {
+        padding: 6px 0;
+    }
+
+    .mian-content-wthree {
+        min-height: 720px;
+    }
+
+    p.counter {
+        font-size: 2.6em;
+    }
+}
+
+
+
+
+@media(max-width: 900px) {
+    .agents-w3 {
+        left: 4%;
+    }
+}
+
+@media(max-width: 800px) {
+    .img-podi-w3ls {
+        width: 13%;
+    }
+
+    .agents-w3 {
+        left: 0;
+        width: 19%;
+    }
+}
+
+@media(max-width: 768px) {
+    .img-posi-w3pvt {
+        width: 14%;
+    }
+}
+
+@media(max-width: 736px) {
+    .w3social-icons ul li a {
+        font-size: 14px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .demo > li {
+        max-width: 240px;
+    }
+
+    ul.apps-lists li a {
+        padding: 14px 17px;
+        font-size: 14px;
+    }
+
+    h3.title-w3 {
+        font-size: 36px;
+    }
+
+    .team-img {
+        min-height: 290px;
+    }
+
+    .style-banner h3 {
+        font-size: 42px;
+    }
+
+        .style-banner h3 span {
+            font-size: 36px;
+            padding: 0px 14px 5px;
+        }
+
+    .style-banner p {
+        font-size: 14px;
+    }
+
+    .style-banner {
+        padding-top: 10em;
+    }
+
+    .mian-content-wthree {
+        min-height: 740px;
+    }
+
+    .w3layouts_stats_left {
+        padding: 0;
+    }
+
+    p.counter {
+        font-size: 2.2em;
+    }
+
+    .agents-w3 {
+        width: 17%;
+    }
+}
+
+@media(max-width: 667px) {
+    ul.apps-lists li a {
+        padding: 13px 11px;
+    }
+
+        ul.apps-lists li a span {
+            font-size: 20px;
+        }
+
+    .img-podi-w3ls {
+        width: 15%;
+    }
+
+    .modal-body .form-control {
+        padding: 10px 14px;
+    }
+}
+
+@media(max-width: 640px) {
+    .img-podi-w3ls {
+        width: 13%;
+    }
+
+    h3.title-w3 {
+        font-size: 32px;
+    }
+
+    .agents-w3 {
+        position: static;
+        width: 26%;
+    }
+
+    .property-paper {
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+
+@media(max-width: 600px) {
+    ul.apps-lists li a {
+        padding: 13px 9px;
+        font-size: 13px;
+    }
+
+        ul.apps-lists li a span {
+            font-size: 18px;
+        }
+
+    .popup {
+        margin: 5em auto;
+    }
+}
+
+@media(max-width: 568px) {
+    a.logo {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    ul.apps-lists li {
+        display: block;
+    }
+
+    .img-podi-w3ls {
+        width: 24%;
+    }
+
+    ul.apps-lists li a {
+        padding: 15px 15px;
+        margin: 6px 0;
+    }
+
+    .place-w3 {
+        padding: 0 1em;
+    }
+
+    .team-img {
+        min-height: 340px;
+    }
+
+    nav.navbar {
+        padding: 3px 10px;
+    }
+
+    a.navbar-brand {
+        font-size: 44px;
+    }
+
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-light.navbar-fixed-top.top-nav-collapse {
+        padding: 0px 10px;
+    }
+
+    .home-form-w3ls select.form-control {
+        font-size: 14px;
+    }
+
+    .home-form-w3ls button {
+        font-size: 15px;
+    }
+
+    .w3layouts_stats_left {
+        padding: 0 1em;
+    }
+
+    .agents-w3 {
+        width: 30%;
+    }
+
+    .popup {
+        margin: 5em 1em;
+    }
+}
+
+@media(max-width: 480px) {
+    h3.title-w3 {
+        font-size: 32px;
+    }
+
+    .demo > li {
+        max-width: 202px;
+    }
+
+    #services {
+        padding-bottom: 11em !important;
+    }
+
+    .img-posi-w3pvt {
+        width: 16%;
+    }
+
+    .style-banner h3 {
+        font-size: 40px;
+    }
+
+        .style-banner h3 span {
+            font-size: 33px;
+        }
+
+    .style-banner {
+        padding-top: 9em;
+    }
+
+        .style-banner p {
+            font-size: 12px;
+        }
+
+    .mian-content-wthree {
+        min-height: 700px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+
+    .agents-w3 {
+        width: 50%;
+    }
+}
+
+@media(max-width: 440px) {
+    .contact_grid_right textarea {
+        min-height: 140px;
+    }
+
+    .demo > li {
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 414px) {
+    .img-podi-w3ls {
+        width: 26%;
+    }
+
+    h3.title-sub {
+        font-size: 25px;
+    }
+
+    .style-banner h3 {
+        font-size: 38px;
+    }
+
+    .style-banner {
+        padding-top: 8em;
+    }
+
+    .mian-content-wthree {
+        min-height: 680px;
+    }
+}
+
+@media(max-width: 384px) {
+    p.copy-right-grids {
+        font-size: 12px;
+    }
+
+    a.logo {
+        font-size: 44px;
+    }
+
+    .contact_grid_right button {
+        padding: 14px 0;
+        font-size: 13px;
+    }
+
+    .img-posi-w3pvt {
+        width: 20%;
+    }
+
+    .popup p {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 375px) {
+    h3.title-w3 {
+        font-size: 30px;
+    }
+
+    .w3pvtits-services-grids {
+        padding: 2em;
+    }
+
+    a.navbar-brand {
+        font-size: 40px;
+    }
+
+    .style-banner h3 {
+        font-size: 34px;
+    }
+
+        .style-banner h3 span {
+            font-size: 28px;
+            padding: 0px 9px 4px;
+        }
+
+    .style-banner {
+        padding-top: 7em;
+    }
+
+    .home-form-w3ls select.form-control {
+        font-size: 13px;
+    }
+
+    .home-form-w3ls button {
+        font-size: 14px;
+        padding: 13px 30px;
+    }
+
+    .mian-content-wthree {
+        min-height: 650px;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 13px;
+    }
+
+    h3.title-w3 {
+        font-size: 26px;
+    }
+}
+
+@media(max-width: 320px) {
+    p.copy-right-grids {
+        letter-spacing: 1px;
+    }
+
+    .footer-grid ul li a,
+    .footer-grid ul li {
+        font-size: 12px;
+    }
+
+    .contact_grid_right textarea {
+        min-height: 120px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    h3.title-w3 {
+        font-size: 26px;
+    }
+
+    .team-img {
+        min-height: 300px;
+    }
+
+    .img-posi-w3pvt {
+        width: 24%;
+    }
+
+    h3.title-sub {
+        font-size: 22px;
+    }
+
+    .style-banner h3 {
+        font-size: 30px;
+    }
+
+    .style-banner p {
+        font-size: 11px;
+    }
+
+    .style-banner {
+        padding-top: 6.5em;
+    }
+
+        .style-banner h3 span {
+            font-size: 26px;
+        }
+
+    .mian-content-wthree {
+        min-height: 620px;
+    }
+
+    .agents-w3 {
+        width: 60%;
+    }
+}
+
+/* //responsive */

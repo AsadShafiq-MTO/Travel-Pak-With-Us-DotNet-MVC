@@ -1,0 +1,145 @@
+﻿@{
+    ViewBag.Title = "_AirlineInformationLayout";
+}
+<!DOCTYPE HTML>
+<html lang="zxx">
+<head>
+    <title>Airline Booking</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="~/images/imgeofbooking/PIA 2.jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link href="~/Content/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Bootstrap-Core-CSS -->
+    <link href="~/Content/css/AirlineBooking.css" rel='stylesheet' type='text/css' />
+    <!-- Style-CSS -->
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <!-- //Web-Fonts -->
+
+</head>
+
+<body>
+    <!-- header -->
+
+    <header>
+
+        <div class="container">
+            <div class="font">
+                <img src="~/images/icon/icons8-airplane-48.png" class="imge">
+            </div>
+            <div class="header d-lg-flex justify-content-between align-items-center py-2 px-sm-2 px-1">
+
+                <!-- logo -->
+                <div id="logo">
+
+
+                    <h1>
+                        <a href="/Home/index">
+                            <span class="text-bl">T</span>ravel
+                            <span class="text-bl">P</span>ak
+                            <span class="text-bl">W</span>ith
+                            <span class="text-bl">U</span>s
+                        </a>
+                    </h1>
+                </div>
+                <!-- //logo -->
+                <!-- nav -->
+                <div class="nav_w3ls ml-lg-5">
+                    <nav>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu">
+                            @*<li><a href="Home">Home</a></li>*@
+                            <li>@Html.ActionLink("Home", "index", "Home")</li>
+
+                            @*<li><a href="Login">Login</a></li>*@
+                            <li>@Html.ActionLink("AirlineInformation", "Index", "AirlineInformation")</li>
+                            <li>@Html.ActionLink("AdminAirlineInfo", "Create", "AirlineInformation")</li>
+                            <li>@Html.ActionLink("AirlineBooking", "Create", "AirlineBooking")</li>
+
+                            @*<li><a href="Registration">Registration</a></li>*@
+
+                        </ul>
+                    </nav>
+                </div>
+                <!-- //nav -->
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/images/icon/icons8-airplane-48.png" class="imge">
+                    <h1 class="head11"><b>Travel Pak With Us</b></h1>
+                </div>
+                <div class="col-md-3">
+                    <h4>Featured</h4>
+                    <p><a href="#banner">Deals&offers</a></p>
+                    <p><a href="#Review">Customer Reviews</a></p>
+                    <p><a href="#Feature">Future Destination</a></p>
+                    <p><a href="booking.html">Cancallation policy</a></p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick content</h4>
+                    <p><i class="fa fa-phone-square"><a href=“tel:+923014025352”> +92-3014025352</a></i></p>
+                    <p><i class="fa fa-envelope"><a href="mailto:zeeshanawais26@gmail.com">zeeshanawais26@gmail.com</a></i></p>
+                    <p><i class="fa fa-home"><a href="https://goo.gl/maps/1Hw1jMMxiJGv7QT38"> Rattigun, Lahore:City</a></i></p>
+
+                </div>
+
+                <div class="col-md-3">
+                    <h4>Follow us on</h4>
+                    <p><i class="fa fa-facebook-official"></i>Facebook</p>
+                    <p><i class="fa fa-youtube-play"></i> youtube</p>
+                    <p><i class="fa fa-twitter"></i>Twitter</p>
+                </div>
+            </div><hr>
+        </div>
+
+    </section>
+
+    <!-- move top icon -->
+    <a href="/AirlineInformation/index" class="move-top text-center">
+        <span class="fa fa-angle-double-up" aria-hidden="true"></span>
+    </a>
+    <!-- //move top icon -->
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @RenderSection("Scripts", false)
+
+
+</body>
+
+</html>
+
+
+

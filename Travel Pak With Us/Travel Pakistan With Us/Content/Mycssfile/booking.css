@@ -1,0 +1,228 @@
+*
+{
+    margin: 0;
+    padding: 0;
+   
+}
+.head
+{
+    color:white;
+    text-align: left;
+    font-family: serif;
+    text-shadow: 1px 1px 19px lime,1px 1px 5px gold,1px 1px 19px chartreuse;
+}
+.imge
+{
+    
+    height:60px;
+    width:60px;
+    float:left;
+}
+.font
+{
+    font-size: 50px;
+    display: inline;
+    
+}
+.font h1
+{
+    font-size: 30px;
+    color:white;
+}
+.full-page {
+    width: 100%;
+    height: 100%;
+    background-image: /*linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),*/ url('../../images/imgeofbooking/ComboImg5.png.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul
+{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li
+{
+display: inline-block;
+margin-right: 30px;
+}
+nav ul li a
+{
+ text-decoration: none;
+ font-size: 20px;
+ border:5px solid white;
+    border-radius: 50px;
+    padding:8px 25px;
+    
+ color: green;
+ font-family: sans-serif;
+}
+/*nav ul li button
+{
+    font-size: 20px;
+    color: white;
+    outline: none;
+    border:5px solid crimson;
+    border-radius: 50px;
+    padding:8px 25px;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+}
+nav ul li button:hover
+{
+    width:100px;
+    outline:none !important;
+    border:5px solid ;
+    border-radius: 50px;
+    padding:8px 25px;
+    color:crimson;
+    float: right;
+    position:relative;
+
+
+}*/
+nav ul li a:hover
+{
+    width:100px;
+    outline:none !important;
+    color:green;
+    border:5px solid green;
+    border-radius: 50px;
+    padding:8px 25px;
+    background:white;
+    position:relative;
+}
+a{
+    text-decoration: none;
+    color:greenyellow;
+    font-size: 28px;
+}
+/*login-form*/
+#login-form
+{
+    display: none;
+}
+.form-box
+{
+    width: 380px;
+    height: 500px;
+    position: relative;
+    margin: 2% auto;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    overflow: hidden;
+}
+.button-box
+{
+    width: 220px;
+    margin: 35px auto;
+    position:relative;
+    box-shadow: 0 0 20px 9px #ff51241f;
+    border-radius: 30px;
+
+}
+.toggle-btn
+{
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border:0;
+    outline: none;
+    position: relative;
+
+}
+#btn
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background:crimson;
+    border-radius: 30px;
+    transition: .5s;
+}
+.input-group-login
+{
+    top:150px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-group-register
+{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field
+{
+    width: 100%;
+    border: 1px solid white;
+    padding:5px 10px;
+    outline: none;
+    background: transparent;
+}
+.submit-btn
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: crimson;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box
+{
+    margin: 30px 10px 34px 0;
+}
+span
+{
+    color: #777;
+    font-size:12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login
+{
+    left: 50px;
+    
+}
+#login input
+{
+    color: white;
+    font-size: 15;
+}
+#register
+{
+    left: 450px;
+    
+}
+#register input
+{
+    color: white;
+    font-size: 15;
+}

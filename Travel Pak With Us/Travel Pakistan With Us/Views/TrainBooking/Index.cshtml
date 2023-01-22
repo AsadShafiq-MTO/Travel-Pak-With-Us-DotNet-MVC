@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Travel_Pakistan_With_Us.Models.TrainBooking>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TrainInformationLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="form-group">
+        <th>
+            @Html.DisplayNameFor(model => model.ArivalFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArivalTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CNIC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeSlot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Returing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SelectTrain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SelectTicket)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AspNetUsers.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="form-group">
+        <td>
+            @Html.DisplayFor(modelItem => item.ArivalFrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArivalTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CNIC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeSlot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Returing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SelectTrain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SelectTicket)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AspNetUsers.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

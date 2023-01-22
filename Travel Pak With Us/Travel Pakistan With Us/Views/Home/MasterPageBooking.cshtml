@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "MasterPageBooking";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="~/images/imgeofbooking/ComboImg6.png.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/Mycssfile/Master.css" rel="stylesheet" />
+    <link href="~/Content/Mycssfile/booking.css" rel="stylesheet" />
+
+</head>
+<body>
+    <nav class="fixed-nav-bar ">
+        <img src="~/images/imgeofbooking/ComboImg7.png.jpg" class="imge">
+        <div class="topnav " id="myTopnav">
+            <a href="/Home/index" class="active" style="text-decoration:none">
+
+                <h1 class="head"><b class="active">Travel Pak With Us</b></h1>
+            </a>
+            <a href="#home" >Home</a>
+            <a href='/BusInformation/index'>Bus Info</a>
+            <a href='/TrainInformation/index'>Train Info</a>
+            <a href='/AirlineInformation/index'>Airline Info</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Cities
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <div class="header">
+                        <h2>City Information</h2>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <h3>Punjab</h3>
+                            <a href="/Home/Lahore">Lahore</a>
+                            <a href="/Home/Faslabad">Faisalabad</a>
+                            <a href="/Home/Murree">Murree</a>
+                            <a href="/Home/Multan">Multan</a>
+                            <a href="/Home/Sialkot">Sialkot</a>
+                            <a href="/Home/Bhalwal">Bhalwal</a>
+                            <a href="/Home/Narowal">Narowal</a>
+
+                        </div>
+                        <div class="column">
+                            <h3>Sindh</h3>
+                            <a href="/Home/Karachi">Karachi</a>   
+                            <a href="/Home/Sukkur">Sukkur</a>
+                            <a href="/Home/Rohri">Rohri</a>
+                            <a href="/Home/Hala">Hala</a>
+                            <a href="/Home/Ghotki">Ghotki</a>
+                           
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <h3>KPK</h3>
+                            <a href="/Home/Swat">Swat</a>
+                            <a href="/Home/Kamrat">Kamrat</a>
+                            <a href="/Home/Kohat">Kohat</a>
+                            <a href="/Home/Mardan">Mardan</a>
+                            <a href="/Home/Kalam">Kalam</a>
+                            <a href="/Home/Skardu">Skardu</a>
+                            <a href="/Home/Gilgit">Gilgit</a>
+
+                        </div>
+                        <div class="column">
+                            <h3>Balochistan</h3>
+                            <a href="/Home/FairyMeadow">Fairy Meadows</a>
+                            <a href="/Home/Harnai">Harnai</a>
+                            <a href="/Home/Kharan">Kharan</a>
+                            <a href="/Home/Qalat">Qalat</a>
+                            <a href="/Home/Gawadar">Gawadar</a>
+
+                        </div>
+                        <div class="column">
+                            <h3>Kashmir</h3>
+                            <a href="/Home/Fairy Meadows">Fairy Meadows</a>
+                            <a href="/Home/Harnai">Harnai</a>
+                            <a href="/Home/Kharan">Kharan</a>
+                            <a href="/Home/Qalat">Qalat</a>
+                            <a href="/Home/Gawadar">Gawadar</a>
+
+                        </div>
+
+                    </div>
+                </div>
+               
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+        </div>
+</nav>
+       
+        <div class="full-page">
+            @*<div style="padding-left:16px">
+                    <h2>Responsive Topnav with Dropdown</h2>
+                    <p>Resize the browser window to see how it works.</p>
+                    <p>Hover over the dropdown button to open the dropdown menu.</p>
+                </div>*@
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+            </script>
+
+
+        </div>
+
+</body>
+</html>
+
+
+<!--<html>
+<head>
+    <title>Book Now</title>
+    <meta charset="UTF-8">
+    <link href="~/Content/Mycssfile/booking.css" rel="stylesheet" />
+    <script>
+
+        $('.dropdown-toggle').dropdown()
+    </script>
+</head>
+<body>
+
+    <div class="full-page">
+
+        <div class="navbar">
+
+            <div class="font">
+
+                <img src="~/images/imgeofbooking/ComboImg7.png.jpg" class="imge">
+                <a href="/Home/index" style="text-decoration:none">
+
+                    <h1 class="head"><b>Travel Pak With Us</b></h1>
+                </a>
+            </div>
+
+            <nav>
+                <div class="dropdown">
+                    <a id="dLabel" data-target="#" href="http://example.com/" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Dropdown trigger
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        ...
+                    </ul>
+                </div>
+
+                <ul id="Menuitems">
+
+                    <li><a href='/Home/index'>Home</a></li>-->
+@*<ul class="nav nav-tabs">
+        ...
+        <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Bus Information <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+            </ul>
+        </li>
+        ...
+    </ul>*@
+
+
+
+<!--<li><a href='/AirlineInformation/index'>AirlineBook</a></li>
+                    <li><a href='/TrainInformation/index'>TrainBook</a></li>
+                    <li><a href='/BusInformation/index'>BussBook</a></li>
+
+                </ul>
+
+            </nav>
+        </div>
+
+    </div>
+
+</body>
+</html>-->
